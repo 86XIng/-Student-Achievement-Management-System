@@ -13,3 +13,12 @@
 - Use sqlServer as it's datasource
 - Use [layui.js](https://www.layui.com/) as it's page frame
 - contact:deeptech@stu.hubu.edu.cn
+![首页](https://upload-images.jianshu.io/upload_images/7209532-d4049b530f8aaabf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![全部课程](https://upload-images.jianshu.io/upload_images/7209532-d89d7dbd4915509f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![课程详情](https://upload-images.jianshu.io/upload_images/7209532-2d829aad78f54041.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![登陆页面](https://upload-images.jianshu.io/upload_images/7209532-ba501842682528bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![后台管理主页面](https://upload-images.jianshu.io/upload_images/7209532-d9fba07b95f368a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![功能之一：选课功能](https://upload-images.jianshu.io/upload_images/7209532-e1972a2cf8015bfa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
