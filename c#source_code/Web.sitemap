@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="admin_manager/Main.aspx" title="湖北大学学生成绩管理后台"  description="湖北大学学生成绩管理后台">
+    <siteMapNode url="admin_manager/PersonalInformation.aspx" title="用户管理"  description="用户管理">
+      <siteMapNode url="admin_manager/ModifyInformation.aspx" title="修改个人信息"  description="修改个人信息" />
+      <siteMapNode url="admin_manager/ModifyTeacherInfo.aspx" title="修改老师信息"  description="修改老师信息" />
+      <siteMapNode url="admin_manager/ModifyStuInfo.aspx" title="修改学生信息"  description="修改学生信息" />
+    </siteMapNode>
+
+    <siteMapNode url="admin_manager/CourseInfoManage.aspx" title="课程管理"  description="课程管理">
+      <siteMapNode url="admin_manager/ModifyCourseInfo.aspx" title="修改课程信息"  description="修改课程信息" />
+    </siteMapNode>
+
+    <siteMapNode url="admin_manager/StudentManage.aspx" title="奖惩管理"  description="奖惩管理">
+      <siteMapNode url="admin_manager/ModifyIformation.aspx" title="修改奖励"  description="修改资料" />
+    </siteMapNode>
+
+    <siteMapNode url="admin_manager/TeacherManage.aspx" title="考试管理"  description="考试管理">
+      <siteMapNode url="admin_manager/ModifyInfrmation.aspx" title="修改考试"  description="修改考试" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

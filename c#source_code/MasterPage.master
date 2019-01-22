@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 147px;
+            height: 131px;
+        }
+        .auto-style5 {
+            height: 131px;
+        }
+        .auto-style7 {
+            height: 45px;
+        }
+        .auto-style8 {
+            height: 12px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    </div>
+        <table style="width: 100%; height: 774px;">
+            <tr>
+                <td class="auto-style7" colspan="2" style="background-color: #FFFF00; text-align: center;">LOGO</td>
+            </tr>
+            <tr>
+                <td class="auto-style2" style="background-color: #00FFFF; text-align: center;">
+                    <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" Height="214px" ImageSet="Arrows">
+                        <DataBindings>
+                            <asp:TreeNodeBinding DataMember="SiteMapNode" TextField="Title" />
+                        </DataBindings>
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                </td>
+                <td class="auto-style5" style="text-align: left; vertical-align: top">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8" colspan="2" style="background-color: #FF0000"></td>
+            </tr>
+        </table>
+    </form>
+</html>

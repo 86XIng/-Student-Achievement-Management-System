@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../tools/layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="../../tools/build/css/app.css" media="all">
+	<script type="text/javascript" src="../../tools/common/js/vue.js"></script>
+	<title>资源回收 O2O 平台</title>
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin kit-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">资源回收 O2O 管理系统</div>
+            <div id="user_info">
+            	<ul class="layui-nav layui-layout-right kit-nav">
+	                <li class="layui-nav-item">
+	                    <a href="javascript:;">
+	                        <img src="http://m.zhengjinfan.cn/images/0.jpg" class="layui-nav-img">{{info.managerName}}
+	                    </a>
+		            </li>
+		            <li class="layui-nav-item">{{position}}</li>
+		            <li class="layui-nav-item"><a href="javascript:logout();"><i class="fa fa-sign-out" aria-hidden="true"></i> 注销</a></li>
+	            </ul>  
+            </div>
+        </div>
+        <div class="layui-side layui-bg-black kit-side">
+            <div class="layui-side-scroll">
+                <div class="kit-side-fold"><i class="layui-icon">&#xe625; </i></div>
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="kitNavbar" kit-navbar>
+                    <li class="layui-nav-item  layui-nav-itemed">
+                        <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>用户管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" kit-target data-options="{url:'collector_info_manage.html',icon:'&#xe612;',title:'回收员',id:'1'}"><i class="layui-icon">&#xe612;  </i><span> 回收员</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'manager_info_manage.html',icon:'&#xe857;',title:'管理员',id:'2'}",><i class="layui-icon">&#xe857;  </i><span> 管理员</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'user_info_manage.html',icon:'&#xe650;',title:'社区用户',id:'3'}"><i class="layui-icon">&#xe650;  </i><span> 社区用户</span></a></dd>
+                    	</dl>
+                    </li>
+                     <li class="layui-nav-item">
+                        <a class="" href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>订单管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" kit-target data-options="{url:'order-manager/completed-order-list.html',icon:'&#xe63c;',title:'订单详情',id:'4'}"><i class="layui-icon">&#xe63c;  </i><span>订单详情</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'order-manager/proceding-order-list.html',icon:'&#xe609;',title:'订单派送',id:'5'}"><i class="layui-icon">&#xe609;  </i><span>订单派送</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'order-manager/orderFactor.html',icon:'&#xe631; ',title:'派送参数调整',id:'45'}"><i class="layui-icon">&#xe631;  </i><span>派送参数调整</span></a></dd>
+                    	</dl>
+                    </li>
+                     <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>内容管理</span></a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;" kit-target data-options="{url:'content_lbt.html',icon:'&#xe634;',title:'轮播管理',id:'6'}"><i class="layui-icon">&#xe634;  </i><span>轮播管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'content_news.html',icon:'&#xe645;',title:'新闻管理',id:'7'}"><i class="layui-icon">&#xe645;  </i><span>新闻管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'content_announce.html',icon:'&#xe64d;',title:'通知管理',id:'8'}"><i class="layui-icon">&#xe64d;  </i><span>通知管理</span></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>废品管理</span></a>
+                        <dl class="layui-nav-child">
+
+                         <dd><a href="javascript:;" kit-target data-options="{url:'waste_kinds.html',icon:'&#xe62a;',title:'废品种类管理',id:'10'}"><i class="layui-icon">&#xe62a;  </i><span>废品种类管理</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'waste_add.html',icon:'&#xe608;',title:'添加废品',id:'11'}"><i class="layui-icon">&#xe608;  </i><span>添加废品</span></a></dd>
+                        </dl>
+                    </li>
+                     <li class="layui-nav-item">
+                        <a href="javascript:;"><i class="fa fa-plug" aria-hidden="true"></i><span>资源回收统计</span></a>
+                        <dl class="layui-nav-child">
+                        	 <dd><a href="javascript:;" kit-target data-options="{url:'../web/analysis/FristAnalysis.html',icon:'&#xe62a;;',title:'回收量',id:'7'}"><i class="layui-icon">&#xe62c; </i><span>回收量统计</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'../web/analysis/TimeAnalysis.html',icon:'&#xe62a;;',title:'活跃度显示',id:'60'}"><i class="layui-icon">&#xe628;;  </i><span>活跃度显示</span></a></dd>  
+                       		 <dd><a href="javascript:;" kit-target data-options="{url:'./statistic/statis_pie.html',icon:'&#xe629;',title:'年度资源销售情况统计',id:'12'}"><i class="layui-icon">&#xe629;  </i><span>年度资源销售情况统计</span></a></dd>
+                            <dd><a href="javascript:;" kit-target data-options="{url:'./statistic/statis_line.html',icon:'&#xe62c;',title:'资源回收变化统计',id:'13'}"><i class="layui-icon">&#xe62c;  </i><span>资源回收变化统计</span></a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;" data-url="/components/table/table.html" data-name="table" kit-loader><i class="fa fa-plug" aria-hidden="true"></i><span>其他</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="layui-body" id="container">
+            <!-- 内容主体区域 -->
+            <div style="padding: 15px;">主体内容加载中,请稍等...</div>
+        </div>
+
+        <div class="layui-footer">
+            <!-- 底部固定区域 -->
+            2018 &copy;
+            <a href="javascript:;">资源回收 O2O 平台</a> 
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1264021086'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1264021086%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript"  src="../../tools/layui/layui.js"></script>
+    <script type="text/javascript" src="../../tools/bootstrap/js/jquery-2.1.0.js" ></script>
+    <script src="../../js/web/index.js" ></script>
+    <script>
+        var message;
+        layui.config({
+            base: '../../tools/build/js/'
+        }).use(['app', 'message'], function() {
+            var app = layui.app,
+                $ = layui.jquery,
+                layer = layui.layer;
+            //将message设置为全局以便子页面调用
+            message = layui.message;
+            //主入口
+            app.set({
+                type: 'iframe'
+            }).init();
+        });
+    </script>
+</body>
+
+</html>

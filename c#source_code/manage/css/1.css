@@ -1,0 +1,49 @@
+.imgCard {
+    padding-right: 30px;
+}
+.imgCard button {
+    background-color: #5FB878;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+.delete {
+    position: absolute;
+    top: 53px;
+    left: 300px;
+}
+.imgWrap {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.imgWrap .uploadText {
+    text-align: center;
+    line-height: 250px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.imgWrap .uploadText .inputImg {
+    width: 200px;
+    height: 250px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    opacity: 0;
+}
+.imgWrap img{
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    background-position: center;
+    top: 0;
+    left: 0;
+}
+
+#addCard {
+    margin-top: 21px;
+}
